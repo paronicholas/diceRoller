@@ -1,0 +1,23 @@
+@start
+  *say
+    [say1_welcome]
+  *then
+    hear imperial assault, star wars, star wars imperial assault {
+			set gamePlayed as 'star wars imperial assault'
+      -> ia_start
+    }
+		hear descent, descent two {
+			set gamePlayed as 'descent 2'
+			-> descent_start
+		}
+
+@resume
+	*say
+		[welcome_back {groupName} {gamePlayed}]
+	*then
+		hear yes, continue, continue game, continue the game, continue mission, continue the mission, continue campain, continue the campain {
+			>> RESUME
+		}
+		hear no, new game, start new game, start a new game, new mission, start new mission, start a new mission, new campain, start new campain, start a new campain {
+			-> start
+		}

@@ -1,0 +1,10 @@
+{
+    "sfx": "<audio src='$SNIPPET_S3_RESOURCES_URI/audio/$1'/>",
+    "pic": "$SNIPPET_S3_RESOURCES_URI/images/$1",
+    "say1_welcome": "Welcome to the board game dice roller, never roll your own dice again! Would you like to play Star Wars Imperial Assault or Descent 2?",
+    "welcome_back": "Welcome back to the dice roller, your last played game was $1 and the campain was $2. Would you like to continue with this campain?",
+    "ia_start": "Welcome to Star Wars Imperial Assault. Do you want to set up a new group or continue a current mission?",
+    "ia_group_name": "What do you want to call your group?",
+    "ia_group_size": "How many people are in $1?",
+    "d2_start": "Welcome to Descent 2. This section is still under construction, please hang with us!"
+}

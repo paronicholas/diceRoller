@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1604535768320" clover="3.2.0">
+  <project timestamp="1604535768321" name="All files">
+    <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0" elements="10" coveredelements="0" complexity="0" loc="7" ncloc="7" packages="1" files="2" classes="2"/>
+    <file name="ExtensionLoader.ts" path="/Users/nichparo/Documents/Development/diceRoller/code/extensions/ExtensionLoader.ts">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+    </file>
+    <file name="SampleCustomExtension.ts" path="/Users/nichparo/Documents/Development/diceRoller/code/extensions/SampleCustomExtension.ts">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,0 +1,6 @@
+projectKey=skill
+serverUrl=http://localhost:9000
+serverVersion=8.5.1.38104
+dashboardUrl=http://localhost:9000/dashboard?id=skill
+ceTaskId=AXWawoThMravq-55UZ4l
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXWawoThMravq-55UZ4l

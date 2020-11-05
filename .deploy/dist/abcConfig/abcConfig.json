@@ -1,0 +1,75 @@
+{
+	"prod": {
+		"ask-profile-name": "default",
+		"aws-profile-name": "default",
+		"skill-invocation-name": "prod dice roller",
+		"dynamo-db-session-table-name": "diceroller-sessions",
+		"story-title": "Prod - boardgame dice roller",
+		"story-id": "prod-diceRoller",
+		"ask-skill-directory-name": "prod-diceRoller"
+	},
+	"beta": {
+		"ask-profile-name": "default",
+		"aws-profile-name": "default",
+		"skill-invocation-name": "beta dice roller",
+		"dynamo-db-session-table-name": "diceroller-sessions",
+		"story-title": "Beta - boardgame dice roller",
+		"story-id": "beta-diceRoller",
+		"ask-skill-directory-name": "beta-diceRoller"
+	},
+	"alpha": {
+		"ask-profile-name": "default",
+		"aws-profile-name": "default",
+		"skill-invocation-name": "alpha dice roller",
+		"dynamo-db-session-table-name": "diceroller-sessions",
+		"story-title": "Alpha - boardgame dice roller",
+		"story-id": "alpha-diceRoller",
+		"ask-skill-directory-name": "alpha-diceRoller"
+	},
+	"dev": {},
+	"prod-en-us": {},
+	"beta-en-us": {},
+	"alpha-en-us": {},
+	"dev-en-us": {},
+	"en-us": {},
+	"en-gb": {},
+	
+	"default": {
+		"ask-profile-name": "default",
+		"aws-profile-name": "default",
+		"skill-invocation-name": "boardgame dice roller",
+		"dynamo-db-session-table-name": "diceroller-sessions",
+		"s3-domain-name": "s3.amazonaws.com",
+		"s3-bucket-name": "alexa-ml",
+		"ask-skill-directory-name": "diceroller",
+		"publish-locales": [
+			"en-US"
+		],
+		"update-string-with-source": true,
+		"story-title": "diceRoller",
+		"story-id": "diceroller",
+		"abc-baked-filename": "baked_story.json",
+		"abc-recording-script-filename": "vo_script.txt",
+		"public-resource-folders": ["audio", "images", "vo"],
+		"polly-config": {
+			"enabled": false,
+			"combineAudioTags": true,
+			"dontUseCache": false,
+			"engine": "standard"
+		},
+		"default-narrator": {
+			"enabled": false,
+			"name": "Matthew",
+			"pitch": "+10%",
+			"rate": "112%",
+			"volume": "1.0"
+		},
+		"snippet-map-filename": "Snippets.json",
+		"apl-templates-filename": "apl-templates.json",
+		"custom-slottype-filename": "SlotTypes.json",
+		"isp-config-filename": "ProductISPs.json",
+		"skipFFMPEGInclude": true,
+		"base-interaction-model-filename": "voiceModel.json",
+		"sfbLocalTesting": true
+	}
+}

@@ -1,0 +1,5 @@
+@descent_start
+	*say
+		[d2_start]
+	*then
+		>> PAUSE

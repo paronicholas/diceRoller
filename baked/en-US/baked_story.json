@@ -1,0 +1,547 @@
+{
+    "pluginName": "default",
+    "scenes": [
+        {
+            "contents": [
+                {
+                    "narration": "Welcome to Descent 2. This section is still under construction, please hang with us!",
+                    "sceneDirections": [
+                        {
+                            "directionType": "pause",
+                            "parameters": {}
+                        }
+                    ]
+                }
+            ],
+            "id": "descent_start",
+            "customProperties": {
+                "sourceLocation": 0,
+                "sourceID": "story/story-d2.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Welcome to Star Wars Imperial Assault. Do you want to set up a new group or continue a current mission?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "new",
+                                    "new group",
+                                    "set up",
+                                    "set up new group",
+                                    "set up a new group",
+                                    "new mission"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "ia_new_group",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexaIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "continue",
+                                    "current",
+                                    "continue mission",
+                                    "current mission",
+                                    "continue current mission",
+                                    "resume",
+                                    "resume mission",
+                                    "resume current",
+                                    "resume current mission"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "ia_continue_mission",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.ResumeIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "ia_start",
+            "customProperties": {
+                "sourceLocation": 0,
+                "sourceID": "story/story-is.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "What do you want to call your group?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "slot",
+                            "parameters": {
+                                "variableName": "groupName",
+                                "variableType": "AMAZON.SearchQuery"
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "group {groupName}",
+                                    "group is {groupName}",
+                                    "the group is {groupName}",
+                                    "our group is {groupName}",
+                                    "set group to {groupName}",
+                                    "set group as {groupName}",
+                                    "group name {groupName}",
+                                    "group name is {groupName}"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "set",
+                                        "parameters": {
+                                            "variableName": "group",
+                                            "variableValue": "{groupName}"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "ia_group_size",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": []
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "ia_new_group",
+            "customProperties": {
+                "sourceLocation": 436,
+                "sourceID": "story/story-is.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "How many people are in {groupName}?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "slot",
+                            "parameters": {
+                                "variableName": "groupSize",
+                                "variableType": "AMAZON.NUMBER"
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "{groupSize} players",
+                                    "group has {groupSize}",
+                                    "group has {groupSize} players",
+                                    "group is {groupSize}",
+                                    "group is {groupSize} players",
+                                    "the group is {groupSize}",
+                                    "the groups is {groupSize} players"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "set",
+                                        "parameters": {
+                                            "variableName": "size",
+                                            "variableValue": "{groupSize}"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "ia_set_characters",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": []
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "ia_group_size",
+            "customProperties": {
+                "sourceLocation": 814,
+                "sourceID": "story/story-is.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Under construction",
+                    "sceneDirections": [
+                        {
+                            "directionType": "pause",
+                            "parameters": {}
+                        }
+                    ]
+                }
+            ],
+            "id": "ia_set_characters",
+            "customProperties": {
+                "sourceLocation": 1182,
+                "sourceID": "story/story-is.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "",
+                    "sceneDirections": [
+                        {
+                            "directionType": "ending",
+                            "parameters": {}
+                        }
+                    ]
+                }
+            ],
+            "id": "ia_continue_mission",
+            "customProperties": {
+                "sourceLocation": 1253,
+                "sourceID": "story/story-is.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Welcome to the board game dice roller, never roll your own dice again! Would you like to play Star Wars Imperial Assault or Descent 2?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "imperial assault",
+                                    "star wars",
+                                    "star wars imperial assault"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "set",
+                                        "parameters": {
+                                            "variableName": "gamePlayed",
+                                            "variableValue": "star wars imperial assault"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "ia_start",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexcIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "descent",
+                                    "descent two"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "set",
+                                        "parameters": {
+                                            "variableName": "gamePlayed",
+                                            "variableValue": "descent 2"
+                                        }
+                                    },
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "descent_start",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "flexdIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "start",
+            "customProperties": {
+                "sourceLocation": 0,
+                "sourceID": "story/story.abc"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "narration": "Welcome back to the dice roller, your last played game was {groupName} and the campain was {gamePlayed}. Would you like to continue with this campain?",
+                    "sceneDirections": [
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "yes",
+                                    "continue",
+                                    "continue game",
+                                    "continue the game",
+                                    "continue mission",
+                                    "continue the mission",
+                                    "continue campain",
+                                    "continue the campain"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "{resume}",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.YesIntent",
+                                    "AMAZON.ResumeIntent",
+                                    "flexbIntent"
+                                ]
+                            }
+                        },
+                        {
+                            "directionType": "choice",
+                            "parameters": {
+                                "utterances": [
+                                    "no",
+                                    "new game",
+                                    "start new game",
+                                    "start a new game",
+                                    "new mission",
+                                    "start new mission",
+                                    "start a new mission",
+                                    "new campain",
+                                    "start new campain",
+                                    "start a new campain"
+                                ],
+                                "saveToHistory": "true",
+                                "directions": [
+                                    {
+                                        "directionType": "go to",
+                                        "parameters": {
+                                            "target": "start",
+                                            "targetSceneProperty": "narration"
+                                        }
+                                    }
+                                ],
+                                "utteranceIDs": [
+                                    "AMAZON.NoIntent",
+                                    "flexeIntent",
+                                    "flexaIntent"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "resume",
+            "customProperties": {
+                "sourceLocation": 390,
+                "sourceID": "story/story.abc"
+            }
+        }
+    ],
+    "storyID": "beta-diceRoller",
+    "storyTitle": "Beta - boardgame dice roller",
+    "alexaVoiceModel": {
+        "languageModel": {
+            "intents": [
+                {
+                    "name": "flexaIntent",
+                    "samples": [
+                        "new",
+                        "new group",
+                        "set up",
+                        "set up new group",
+                        "set up a new group",
+                        "new mission",
+                        "start new mission",
+                        "start a new mission",
+                        "new campain",
+                        "start new campain",
+                        "start a new campain"
+                    ]
+                },
+                {
+                    "name": "flexbIntent",
+                    "samples": [
+                        "current",
+                        "continue mission",
+                        "current mission",
+                        "continue current mission",
+                        "resume mission",
+                        "resume current",
+                        "resume current mission",
+                        "continue the mission",
+                        "continue campain",
+                        "continue the campain"
+                    ]
+                },
+                {
+                    "name": "CatchAllSlotIntent",
+                    "samples": [
+                        "{groupSize} players",
+                        "group has {groupSize}",
+                        "group has {groupSize} players",
+                        "group is {groupSize}",
+                        "group is {groupSize} players",
+                        "the group is {groupSize}",
+                        "the groups is {groupSize} players",
+                        "group {groupName}",
+                        "group is {groupName}",
+                        "the group is {groupName}",
+                        "our group is {groupName}",
+                        "set group to {groupName}",
+                        "set group as {groupName}",
+                        "group name {groupName}",
+                        "group name is {groupName}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "groupSize",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "groupName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "flexcIntent",
+                    "samples": [
+                        "imperial assault",
+                        "star wars",
+                        "star wars imperial assault"
+                    ]
+                },
+                {
+                    "name": "flexdIntent",
+                    "samples": [
+                        "descent",
+                        "descent two"
+                    ]
+                },
+                {
+                    "name": "flexeIntent",
+                    "samples": [
+                        "new game",
+                        "start new game",
+                        "start a new game"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent"
+                },
+                {
+                    "name": "AMAZON.HelpIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOffIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOnIntent"
+                },
+                {
+                    "name": "AMAZON.NextIntent"
+                },
+                {
+                    "name": "AMAZON.NoIntent"
+                },
+                {
+                    "name": "AMAZON.PauseIntent"
+                },
+                {
+                    "name": "AMAZON.PreviousIntent"
+                },
+                {
+                    "name": "AMAZON.RepeatIntent"
+                },
+                {
+                    "name": "AMAZON.ResumeIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOffIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOnIntent"
+                },
+                {
+                    "name": "AMAZON.StartOverIntent"
+                },
+                {
+                    "name": "AMAZON.StopIntent"
+                },
+                {
+                    "name": "AMAZON.YesIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent"
+                },
+                {
+                    "name": "AMAZON.PageUpIntent"
+                },
+                {
+                    "name": "AMAZON.PageDownIntent"
+                },
+                {
+                    "name": "AMAZON.MoreIntent"
+                },
+                {
+                    "name": "AMAZON.FallbackIntent"
+                }
+            ],
+            "invocationName": "beta dice roller"
+        }
+    }
+}

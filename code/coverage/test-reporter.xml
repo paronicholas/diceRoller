@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/Users/nichparo/Documents/Development/diceRoller/code/test/extensions/SampleCustomExtension.spec.ts">
+        <testCase name="Example test package true" duration="3"/>
+    </file>
+</testExecutions>

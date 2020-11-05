@@ -1,0 +1,162 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "intents": [
+                {
+                    "name": "flexaIntent",
+                    "samples": [
+                        "new",
+                        "new group",
+                        "set up",
+                        "set up new group",
+                        "set up a new group",
+                        "new mission",
+                        "start new mission",
+                        "start a new mission",
+                        "new campain",
+                        "start new campain",
+                        "start a new campain"
+                    ]
+                },
+                {
+                    "name": "flexbIntent",
+                    "samples": [
+                        "current",
+                        "continue mission",
+                        "current mission",
+                        "continue current mission",
+                        "resume mission",
+                        "resume current",
+                        "resume current mission",
+                        "continue the mission",
+                        "continue campain",
+                        "continue the campain"
+                    ]
+                },
+                {
+                    "name": "CatchAllSlotIntent",
+                    "samples": [
+                        "{groupSize} players",
+                        "group has {groupSize}",
+                        "group has {groupSize} players",
+                        "group is {groupSize}",
+                        "group is {groupSize} players",
+                        "the group is {groupSize}",
+                        "the groups is {groupSize} players",
+                        "group {groupName}",
+                        "group is {groupName}",
+                        "the group is {groupName}",
+                        "our group is {groupName}",
+                        "set group to {groupName}",
+                        "set group as {groupName}",
+                        "group name {groupName}",
+                        "group name is {groupName}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "groupSize",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "groupName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ]
+                },
+                {
+                    "name": "flexcIntent",
+                    "samples": [
+                        "imperial assault",
+                        "star wars",
+                        "star wars imperial assault"
+                    ]
+                },
+                {
+                    "name": "flexdIntent",
+                    "samples": [
+                        "descent",
+                        "descent two"
+                    ]
+                },
+                {
+                    "name": "flexeIntent",
+                    "samples": [
+                        "new game",
+                        "start new game",
+                        "start a new game"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent"
+                },
+                {
+                    "name": "AMAZON.HelpIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOffIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOnIntent"
+                },
+                {
+                    "name": "AMAZON.NextIntent"
+                },
+                {
+                    "name": "AMAZON.NoIntent"
+                },
+                {
+                    "name": "AMAZON.PauseIntent"
+                },
+                {
+                    "name": "AMAZON.PreviousIntent"
+                },
+                {
+                    "name": "AMAZON.RepeatIntent"
+                },
+                {
+                    "name": "AMAZON.ResumeIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOffIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOnIntent"
+                },
+                {
+                    "name": "AMAZON.StartOverIntent"
+                },
+                {
+                    "name": "AMAZON.StopIntent"
+                },
+                {
+                    "name": "AMAZON.YesIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent"
+                },
+                {
+                    "name": "AMAZON.PageUpIntent"
+                },
+                {
+                    "name": "AMAZON.PageDownIntent"
+                },
+                {
+                    "name": "AMAZON.MoreIntent"
+                },
+                {
+                    "name": "AMAZON.FallbackIntent"
+                }
+            ],
+            "invocationName": "beta dice roller"
+        }
+    }
+}

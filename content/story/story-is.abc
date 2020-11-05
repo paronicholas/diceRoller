@@ -1,0 +1,39 @@
+@ia_start
+  *say
+    [ia_start]
+  *then
+    hear new, new group, set up, set up new group, set up a new group, new mission {
+      -> ia_new_group
+    }
+    hear continue, current, continue mission, current mission, continue current mission, resume, resume mission, resume current, resume current mission {
+      -> ia_continue_mission
+    }
+
+@ia_new_group
+  *say
+    [ia_group_name]
+  *then
+    slot groupName to 'AMAZON.SearchQuery'
+    hear group {groupName}, group is {groupName}, the group is {groupName}, our group is {groupName}, set group to {groupName}, set group as {groupName}, group name {groupName}, group name is {groupName} {
+      set group as groupName
+      -> ia_group_size
+    }
+
+@ia_group_size
+  *say
+    [ia_group_size {groupName}]
+  *then
+    slot groupSize to 'AMAZON.NUMBER'
+    hear {groupSize} players, group has {groupSize}, group has {groupSize} players, group is {groupSize}, group is {groupSize} players, the group is {groupSize}, the groups is {groupSize} players {
+      set size as groupSize
+      -> ia_set_characters
+    }
+
+@ia_set_characters
+  *say
+    Under construction
+  *then
+    >> PAUSE
+
+@ia_continue_mission
+  >> PAUSE

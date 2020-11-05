@@ -1,0 +1,6 @@
+{
+    "include": [
+        "story/*.abc"
+    ],
+    "version": 1
+}
